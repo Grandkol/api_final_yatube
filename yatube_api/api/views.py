@@ -11,7 +11,7 @@ from posts.models import Group, Post
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly,]
+    permission_classes = [IsAuthenticatedOrReadOnly, ]
 
 
 class PostViewSet(viewsets.ModelViewSet):
